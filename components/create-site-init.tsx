@@ -15,7 +15,7 @@ export default function CreateSiteInit() {
             await timeout()
             modal?.show(form)
         })()
-    }, [])
+    })
 
     return null
 }

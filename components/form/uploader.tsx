@@ -33,9 +33,9 @@ export default function Uploader({
         !file.type.includes("png") &&
         !file.type.includes("jpg") &&
         !file.type.includes("jpeg")
-        ) {
-          toast.error("Fichier invalide (.png, .jpg, or .jpeg)");
-          e.currentTarget.value = null;
+      ) {
+        toast.error("Fichier invalide (.png, .jpg, or .jpeg)");
+        e.currentTarget.value = null;
       } else {
         const reader = new FileReader();
         reader.onload = (e) => {
@@ -118,22 +118,13 @@ export default function Uploader({
           </p>
           <span className="sr-only">Upload fichier</span>
         </div>
-        {data[name] && (
-          data[name]?.includes("cloudinary") ?
-            (<Img
-              src={data[name] as string}
-              alt="Preview"
-              className="h-full w-full rounded-md object-cover"
-              width={1200}
-              height={630}
-            />) :
-            (<img
-              src={data[name] as string}
-              alt="Preview"
-              className="h-full w-full rounded-md object-cover"
-            />)
-
-        )}
+        {data[name] && (<Img
+          src={data[name] as string}
+          alt="Preview"
+          className="h-full w-full rounded-md object-cover"
+          width={1200}
+          height={630}
+        />)}
       </label>
       <div className="mt-1 flex rounded-md shadow-sm">
         <input

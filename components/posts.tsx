@@ -44,7 +44,7 @@ export default async function Posts({
         height={400}
       />
       <p className="text-lg text-stone-500 flex flex-col items-center gap-4">
-        Vous n'avez pas encore d'articles.
+        {"Vous n'avez pas encore d'articles."}
         <CreatePostButton />
       </p>
     </div>

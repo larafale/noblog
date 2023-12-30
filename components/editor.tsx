@@ -207,12 +207,13 @@ const AISubItem = (props: any) => {
 }
 
 const MenuBar = ({ editor }: { editor: Editor }) => {
-  if (!editor) return null
 
   const addImage = useCallback(() => {
     const url = window.prompt('URL')
     if (url) editor?.chain().focus().setImage({ src: url }).run()
   }, [editor])
+
+  if (!editor) return null
 
   const selection = editor.commands.getSelectedText()
   const minSelection = selection.length > 3

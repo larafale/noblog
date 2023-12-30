@@ -13,7 +13,7 @@ import { isCloudinarySrc } from "@/lib/utils";
 export const Img = (props: CldImageProps) => {
   return isCloudinarySrc(props.src)
     ? <CldImage {...props} />
-    : <Image {...props} />
+    : <Image {...props} alt={props.alt || ""} />
 }
 
 export default function BlurImg(props: ComponentProps<typeof CldImage>) {

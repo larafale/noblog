@@ -33,7 +33,7 @@ export default function DeletePostForm({ postName }: { postName: string }) {
        <div className="relative flex flex-col space-y-4 p-5 sm:p-10">
         <h2 className="font-cal text-xl">Suppression</h2>
         <p className="text-sm text-muted-foreground">
-          Supprimer définitivement l'article. Saisissez le titre de l'article <b>{postName}</b> pour confirmation.
+          Supprimer définitivement le post. Saisissez le titre de le post <b>{postName}</b> pour confirmation.
         </p>
 
         <Input
